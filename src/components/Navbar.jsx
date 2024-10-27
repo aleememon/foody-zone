@@ -2,7 +2,7 @@ import React from "react";
 import { menuItems } from "../data/data";
 const Navbar = ({ setData, data }) => {
   const handleSearch = (e) => {
-    const searchValue = e.target.value;
+    const searchValue = e.target.value.trim();
 
     const filter = menuItems?.filter((food) =>
       food.name.toLowerCase().includes(searchValue.toLowerCase())
